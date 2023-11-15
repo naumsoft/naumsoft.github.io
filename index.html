@@ -5,6 +5,24 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+	<script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "ajax_info.txt", true);
+  xhttp.send();
+}
+</script>
+
+
 	<head>
 		<title>NAUMSOFT</title>
 		<meta charset="utf-8" />
@@ -19,9 +37,9 @@
 				<div class="inner">
 					<nav>
 						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">Who we are</a></li>
+							<li><a href="#intro">WELCOME</a></li>
 							<li><a href="#two">What we do</a></li>
+							<li><a href="#one">Who we are</a></li>
 							<li><a href="#three">Get in touch</a></li>
 						</ul>
 					</nav>
@@ -43,34 +61,6 @@
 						</div>
 					</section>
 
-				<!-- One -->
-					<section id="one" class="wrapper style2 spotlights">
-						<section>
-							<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>오늘의 소식</h2>
-									<p>한페이지로보는 오늘의 뉴스</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>클래스웍스</h2>
-									<p>수강예약관리 시스템</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-					</section>
-
 				<!-- Two -->
 					<section id="two" class="wrapper style3 fade-up">
 						<div class="inner">
@@ -80,40 +70,59 @@
 							<div class="features">
 								<section>
 									<span class="icon solid major fa-code"></span>
-									<h3>Lorem ipsum amet</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									<h3>웹사이트 구축 & 웹솔루션</h3>
+									<p>귀사 업무 운영, 관리 전반에 걸친 전산화를 기획/구축하여 귀사의 운영비용을 절감시켜 드리고 회사 이미지 제고 및 신속하고 정확한 능률적인 업무 처리를 보장해 드리겠습니다.</p>
 								</section>
 								<section>
 									<span class="icon solid major fa-lock"></span>
-									<h3>Aliquam sed nullam</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									<h3>IT 컨설팅 유지보수</h3>
+									<p>24시간 응급대기 시스템 및 원격지원 실현에 이르기까지 귀사의 모든 상하 또는 수평적 실시간 커뮤니케이션을 보장하며 중요 자료에 대한 완벽한 보안 수립 및 필요 상황에서 가장에서 가장 빠르고 적절히 대처해 드리겠습니다.</p>
 								</section>
 								<section>
 									<span class="icon solid major fa-cog"></span>
-									<h3>Sed erat ullam corper</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									<h3>고객관리 프로그램</h3>
+									<p>귀사의 시스템에 꼭 맞는 맞춤형 고객관리 시스템의 도입으로 효율적인 고객관리를 할수있고 다양한 통계자료를통하여 매출분석 및 적극적인 마케팅을 할 수 있습니다.</p>
 								</section>
 								<section>
 									<span class="icon solid major fa-desktop"></span>
-									<h3>Veroeros quis lorem</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-link"></span>
-									<h3>Urna quis bibendum</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon major fa-gem"></span>
-									<h3>Aliquam urna dapibus</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									<h3>프로토타입 제작</h3>
+									<p>구상해놓은 생각과 시스템이 있으면 시제품을 위해 빠르게 프로토타입 제작을 할 수 있습니다. </p>
 								</section>
 							</div>
-							<ul class="actions">
+							<!-- <ul class="actions">
 								<li><a href="generic.html" class="button">Learn more</a></li>
-							</ul>
+							</ul> -->
 						</div>
 					</section>
+
+				<!-- One -->
+				<section id="one" class="wrapper style2 spotlights">
+					<!-- <section>
+						<a href="#" class="image"><img src="images/todayNews-logo.png" alt="" data-position="center center" /></a>
+						<div class="content">
+							<div class="inner">
+								<h2>오늘의 소식</h2>
+								<p>한페이지로보는 오늘의 뉴스</p>
+								<ul class="actions">
+									<li><a href="portfolio1.html" class="button">Learn more</a></li>
+								</ul>
+							</div>
+						</div>
+					</section> -->
+					<section>
+						<a href="#" class="image"><img width="80" height="80" src="images/classworks-logo.jpg" alt="" data-position="top center" /></a>
+						<div class="content">
+							<div class="inner">
+								<h1>클래스웍스</h1>
+								<p>회원예약관리 서비스 - 보다 쉽고 편리하게 예약관리</p>
+								<p>IOS, ANDROID </p>
+								<ul class="actions">
+									<li><a href="portfolio1.html" class="button">더보기</a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</section>
 
 				<!-- Three -->
 					<section id="three" class="wrapper style1 fade-up">
@@ -125,34 +134,33 @@
 									<form method="post" action="#">
 										<div class="fields">
 											<div class="field half">
-												<label for="name">Name</label>
+												<label for="name">이름</label>
 												<input type="text" name="name" id="name" />
 											</div>
 											<div class="field half">
-												<label for="email">Email</label>
+												<label for="email">이메일</label>
 												<input type="text" name="email" id="email" />
 											</div>
 											<div class="field">
-												<label for="message">Message</label>
+												<label for="message">내용</label>
 												<textarea name="message" id="message" rows="5"></textarea>
 											</div>
 										</div>
 										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
+											<li><a href="#" onclick="sendMsg()" class="button submit">SEND</a></li>
 										</ul>
 									</form>
 								</section>
 								<section>
 									<ul class="contact">
 										<li>
-											<h3>Address</h3>
+											<!-- <h3>Address</h3>
 											<span>12345 Somewhere Road #654<br />
-											Nashville, TN 00000-0000<br />
-											USA</span>
+											</span> -->
 										</li>
 										<li>
 											<h3>Email</h3>
-											<a href="#">contact@classworks.kr</a>
+											<a href="#">j.inbok@naumsoft.com</a>
 										</li>
 										<li>
 											<h3>Phone</h3>
@@ -180,7 +188,7 @@
 			<footer id="footer" class="wrapper style1-alt">
 				<div class="inner">
 					<ul class="menu">
-						<li>&copy; naumsoft. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; naumsoft. All rights reserved.</li>
 					</ul>
 				</div>
 			</footer>
